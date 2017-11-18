@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <bean id="triangle" class="com.Demo.Triangle">
+   <!-- <property name="type" value="Equilateral"></property> -->
+   <!--  <constructor-arg index="1" value="20"/>
+   <constructor-arg index="0" value="Equilateral"/> -->
+   
+   <property name="pointA">
+    <bean  class="com.Demo.Point">
+   <property name="x" value="10"></property>
+    <property name="y" value="20"></property>
+  </bean>
+   </property>
+  <property name="pointB">
+  <bean class="com.Demo.Point">
+   <property name="x" value="30"></property>
+    <property name="y" value="40"></property>
+  </bean>
+   </property>
+      <property name="pointC" ref="pointC"></property>
+  </bean>
+  
+ 
+  <bean id="pointC" class="com.Demo.Point">
+ <property name="x" value="50"></property>
+    <property name="y" value="60"></property>
+  </bean>
+  
+  <bean id="circle" class="com.Demo.Circle">
+   <property name="type" value="Oval"></property>
+  </bean>
+</beans>
