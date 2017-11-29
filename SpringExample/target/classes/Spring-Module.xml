@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.mkyong.common.HelloWorld"  >
+		<property name="name" value="Mkyong" />
+	</bean>
+	
+	<bean id="A" class="com.mkyong.common.A" >
+		<!-- <property name="d1" ref="D1" /> -->
+	</bean>
+	
+	<!-- <bean id="B" class="com.mkyong.common.B"  >
+	</bean> -->
+	
+	<!-- <bean id="C" class="com.mkyong.common.C"  >
+	</bean> -->
+	
+	<bean id="D" class="com.mkyong.common.D" >
+		<property name="name" value="D" />
+	</bean>
+	
+	<bean id="D1" class="com.mkyong.common.D" >
+		<property name="name" value="D1" /> 
+	</bean>
+	
+</beans>
